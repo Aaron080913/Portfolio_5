@@ -1,21 +1,27 @@
 *{
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-style: normal;
-        
+    font-style: normal; 
+}
+html{
+    height: 100%;
 }
 body{
+    height: calc(100vh - 164px);
     background-color: burlywood;
 }
 .logo-font {
     text-transform: uppercase;
 }
-
+.container h-100 {
+    margin-top: 20%;
+}
 .main-logo-link {
     width: fit-content;
 }
 .display-4 logo-font text-black{
-    color: white;
+    
+    margin-top: 20%;
 }
 
 .shop-now-button {
@@ -64,3 +70,26 @@ body{
     background: #000 !important;
 }
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
